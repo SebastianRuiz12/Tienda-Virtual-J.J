@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes - Tienda Virtual J.J</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos adicionales para la página de Herramientas */
+        #herramientas {
+            margin-top: 20px;
+        }
+        #herramientas .producto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Animación para la barra de búsqueda */
+        #search-input {
+            transition: width 0.3s ease, border-color 0.3s ease;
+            width: 200px; /* Ancho inicial */
+        }
+
+        #search-input:focus {
+            width: 300px; /* Ancho al enfocar */
+            border-color: #007BFF; /* Cambia el color del borde al enfocar */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Perfumes - Tienda Virtual J.J</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Volver a la página principal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="¿Qué estas buscando?..">
+        <button onclick="buscarProducto()" title="Buscar"><i class="fas fa-search"></i></button>
+    </div>
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="categorias">
+            <button onclick="window.location.href='index.html'">Accesorios Para Celulares</button>
+            <button onclick="window.location.href='Herramientas.html'">Herramientas</button>
+            <button onclick="window.location.href='Converse.html'">Converse</button>
+            <button onclick="window.location.href='Skechers.html'">Skechers</button>
+            <button onclick="window.location.href='perfumes.html'">Perfumes</button>
+        </div>
+    </section>   
+
+    <!-- Sección de Perfumes -->
+    <section id="perfumes">
+        <h2>Perfumes</h2>
+        <div class="producto">
+            <img src="images/1.jpg" alt=" 1 MILLON Y VERSAGE">
+            <h3>1 MILLON Y VERSAGE</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('1 MILLON Y VERSAGE', 170.000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/2.jpg" alt="VERSAGE">
+            <h3>VERSAGE</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('VERSAGE', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/3.jpg" alt="ALCOSTE, 1 MILLON, MONT BLANC LEGEND">
+            <h3>ALCOSTE, 1 MILLON, MONT BLANC LEGEND</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('ALCOSTE, 1 MILLON, MONT BLANC LEGEND', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/4.jpg" alt="YvesSaintLaurent, AL HARAMAIN">
+            <h3>YvesSaintLaurent, AL HARAMAIN</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('YvesSaintLaurent, AL HARAMAIN', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/5.jpg" alt="LACOSTE, VERSAGE YELLOW DIAMOND">
+            <h3>LACOSTE, VERSAGE YELLOW DIAMOND</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('LACOSTE, VERSAGE YELLOW DIAMOND', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/6.jpg" alt="LACOSTE">
+            <h3>LACOSTE</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('LACOSTE', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/7.jpg" alt="AL HARAMAIN">
+            <h3>AL HARAMAIN</h3>
+            <p>$60,000</p>
+            <button onclick="agregarAlCarrito('AL HARAMAIN', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/8.jpg" alt="LACOSTE">
+            <h3>LACOSTE</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('Perfume 2', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/9.jpg" alt="1 MILLON">
+            <h3>1 MILLON</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('1 MILLON', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/10.jpg" alt="YvesSaintLaurent">
+            <h3>YvesSaintLaurent</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('YvesSaintLaurent', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/11.jpg" alt="VERSAGE EROS">
+            <h3>VERSAGE EROS</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('VERSAGE EROS', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/12.jpg" alt="MONT BLANC">
+            <h3>MONT BLANC</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('MONT BLANC', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/13.jpg" alt="VERSAGE YELLOW DIAMOND">
+            <h3>VERSAGE YELLOW DIAMOND</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('VERSAGE YELLOW DIAMOND', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/14.jpg" alt="VERSAGE MAN">
+            <h3>VERSAGE MAN</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('VERSAGE MAN', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/15.jpg" alt="AMBER ROUGE">
+            <h3>AMBER ROUGE</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('AMBER ROUGE', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/16.jpg" alt="INVICTUS, PACO RABANNE">
+            <h3>INVICTUS, PACO RABANNE</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('INVICTUS, PACO RABANNE', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/17.jpg" alt="AM9, SAUVAGE, YARA, ASAD">
+            <h3>AM9, SAUVAGE, YARA, ASAD</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('AM9, SAUVAGE, YARA, ASAD', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/18.jpg" alt="212 HEROES FOREVER YOUNG, 212 SEXY">
+            <h3>12 HEROES FOREVER YOUNG, 212 SEXY</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('12 HEROES FOREVER YOUNG, 212 SEXY', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/19.jpg" alt="VERSAGE DYLAN BLUE, YARA, 212 VIP">
+            <h3>VERSAGE DYLAN BLUE, YARA, 212 VIP</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('VERSAGE DYLAN BLUE, YARA, 212 VIP', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/20.jpg" alt="212 SEXY">
+            <h3>212 SEXY</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('212 SEXY', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <!-- Botón para finalizar compra por WhatsApp -->
+            <button class="whatsapp-button" onclick="redirigirAWhatsApp()">Finalizar compra por WhatsApp</button>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos:</p>
+            <ul>
+                <li>
+                    <i class="fas fa-phone"></i> Teléfono: +57 311 5541747
+                </li>
+                <li>
+                    <a href="https://wa.me/573115541747" target="_blank" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i> WhatsApp: +57 311 5541747
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i> Correo: <a href="mailto:tiendavirtual202502@gmail.com">tiendavirtual202502@gmail.com</a>
+                </li>
+            </ul>
+        </section>
+        <body>
+            <header>
+                <h1>Perfumes - Tienda Virtual J.J</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Volver a la página principal</a></li>
+                    </ul>
+                </nav>
+            </header>
+         
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tienda Virtual. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para imágenes -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

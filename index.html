@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual J.J</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <style>
+        /* Estilos básicos para la barra de búsqueda */
+        .search-bar {
+            margin: 20px 0;
+        }
+        #qrcode {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            width: 128px;
+            height: 128px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Nuevos estilos agregados para los botones de secciones */
+        .section-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .section-buttons button {
+            background-color: #ff8c00; /* Naranja acorde a la campaña */
+            color: #000000; /* Texto en negro */
+            border: 2px solid #000000; /* Borde negro de 2px */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Animación agregada */
+        }
+
+        .section-buttons button:hover {
+            background-color: #ff4500; /* Naranja más oscuro al pasar el ratón */
+            transform: scale(1.05); /* Escala el botón al hacer hover */
+        }
+
+        /* Animación para la barra de búsqueda */
+        #search-input {
+            transition: width 0.3s ease, border-color 0.3s ease;
+            width: 200px; /* Ancho inicial */
+        }
+
+        #search-input:focus {
+            width: 300px; /* Ancho al enfocar */
+            border-color: #007BFF; /* Cambia el color del borde al enfocar */
+        }
+
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Media Queries para dispositivos móviles */
+        @media (max-width: 768px) {
+            .section-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-buttons button {
+                width: 80%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda Virtual J.J</h1>
+        <!-- Código QR -->
+        <div id="qrcode"></div>
+        <!-- Barra de búsqueda -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="¿Qué estas buscando hoy?..">
+            <button onclick="buscarProducto()" title="Buscar"><i class="fas fa-search"></i></button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botones de secciones -->
+        <div class="section-buttons">
+            <button onclick="scrollToSection('accesorios')">Accesorios Para Celulares</button>
+            <button onclick="window.location.href='Herramientas.html'">Herramientas</button>
+            <button onclick="window.location.href='Converse.html'">Converse</button>
+            <button onclick="window.location.href='perfumes.html'">Perfumes</button>
+            <button onclick="window.location.href='Skechers.html'">Skechers</button>
+        </div>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido a nuestra tienda</h2>
+        <p>
+            En <strong>Tienda Virtual J.J</strong>, encontrarás los mejores productos para complementar tu estilo y facilitar tu día a día. Ofrecemos una amplia variedad de:
+        </p>
+        <ul>
+            <li><strong>Accesorios para celulares</strong>: Desde audífonos y cargadores hasta fundas y adaptadores, todo lo que necesitas para tu dispositivo.</li>
+            <li><strong>Converse</strong>: Descubre nuestra colección de zapatillas deportivas y casuales, ideales para cualquier ocasión.</li>
+            <li><strong>Herramientas</strong>: Herramientas prácticas y de calidad para tus proyectos en casa o en el trabajo.</li>
+			<li><strong>Perfumes</strong>: Una selección exclusiva de fragancias para hombres y mujeres.</li> 
+        </ul>
+        <p>
+            ¡Explora nuestras secciones y encuentra lo que buscas al mejor precio!
+        </p>
+    </section>
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="categorias">
+            <button onclick="window.location.href='Herramientas.html'">Herramientas</button>
+            <button onclick="window.location.href='Converse.html'">Converse</button>
+            <button onclick="window.location.href='Skechers.html'">Skechers</button>
+            <button onclick="window.location.href='perfumes.html'">Perfumes</button>
+        </div>
+    </section>   
+
+    <section id="productos">
+        <h2 id="accesorios">Accesorios Para Celulares</h2>
+        <div class="producto">
+            <img src="images/Airpods2DGENERACION.jpg" alt="Airpods 2D Generación">
+            <h3>Airpods 2D Generación</h3>
+            <p>$110,000</p>
+            <button onclick="agregarAlCarrito('Airpods 2D Generación', 110000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/audifonosdecable.jpg" alt="Audífonos de Cable">
+            <h3>Audífonos de Cable</h3>
+            <p>$12,500</p>
+            <button onclick="agregarAlCarrito('Audífonos de Cable', 12500)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/AudifonosdiadematipoAPPLE.jpg" alt="Audífonos Diadema Tipo APPLE">
+            <h3>Audífonos Diadema Tipo APPLE</h3>
+            <p>$130,000</p>
+            <button onclick="agregarAlCarrito('Audífonos Diadema Tipo APPLE', 130000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/audifonosINVA.jpg" alt="Audífonos INVA">
+            <h3>Audífonos INVA</h3>
+            <p>$170,000</p>
+            <button onclick="agregarAlCarrito('Audífonos INVA', 170000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/audifonossamsung.jpg" alt="Audífonos Samsung">
+            <h3>Audífonos Samsung</h3>
+            <p>$10,000</p>
+            <button onclick="agregarAlCarrito('Audífonos Samsung', 10000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/AudifonosSONY.jpg" alt="Audífonos SONY">
+            <h3>Audífonos SONY</h3>
+            <p>$79,900</p>
+            <button onclick="agregarAlCarrito('Audífonos SONY', 79900)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/cargadorHONOR.jpg" alt="Cargador HONOR">
+            <h3>Cargador HONOR</h3>
+            <p>$15,000</p>
+            <button onclick="agregarAlCarrito('Cargador HONOR', 15000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/cargadoriphone14promax.jpg" alt="Cargador iPhone 14 Pro Max">
+            <h3>Cargador iPhone 14 Pro Max</h3>
+            <p>$30,000</p>
+            <button onclick="agregarAlCarrito('Cargador iPhone 14 Pro Max', 30000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/cargadoriphone12promax.jpg" alt="Cargador iPhone 12 Pro Max">
+            <h3>Cargador iPhone 12 Pro Max</h3>
+            <p>$30,000</p>
+            <button onclick="agregarAlCarrito('Cargador iPhone 12 Pro Max', 30000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/Cargarapida.jpg" alt="Carga Rápida Moto Turbo Motorola">
+            <h3>Carga Rápida Moto Turbo Motorola</h3>
+            <p>$12,000</p>
+            <button onclick="agregarAlCarrito('Carga Rápida Moto Turbo Motorola', 12000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/poweradapterAPPLE.jpg" alt="Power Adapter APPLE">
+            <h3>Power Adapter APPLE</h3>
+            <p>$18,000</p>
+            <button onclick="agregarAlCarrito('Power Adapter APPLE', 18000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/USBxiaomi.jpg" alt="USB Xiaomi">
+            <h3>USB Xiaomi</h3>
+            <p>$10,000</p>
+            <button onclick="agregarAlCarrito('USB Xiaomi', 10000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        to</button>
+    </div>
+    <body>
+        <header>
+            <h1>Accesorios Para Celulares - Tienda Virtual J.J</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Volver a la página principal</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="section-buttons">
+            <button onclick="volverAlInicio()">Volver al inicio</button>
+        </div>
+		
+</section>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <!-- Botón para finalizar compra por WhatsApp -->
+        <button class="whatsapp-button" onclick="redirigirAWhatsApp()">Finalizar compra por WhatsApp</button>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos:</p>
+        <ul>
+            <li>
+                <i class="fas fa-phone"></i> Teléfono: +57 311 5541747
+            </li>
+            <li>
+                <a href="https://wa.me/573115541747" target="_blank" class="whatsapp-link">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: +57 311 5541747
+                </a>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i> Correo: <a href="mailto:tiendavirtual202502@gmail.com">tiendavirtual202502@gmail.com</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tienda Virtual. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Modal para imágenes -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Imagen ampliada">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+        
+    <script src="script.js"></script>
+</body>
+</html>

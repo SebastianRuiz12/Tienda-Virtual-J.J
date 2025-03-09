@@ -1,0 +1,440 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    color: #000000; /* Texto en negro */
+}
+
+header {
+    background-color: rgba(255, 165, 0, 0.7); /* Fondo naranja transparente */
+    color: #000000; /* Texto en negro */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #000000; /* Línea negra en la parte inferior */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000000; /* Texto en negro */
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: rgba(255, 165, 0, 0.7); /* Fondo naranja transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000000; /* Texto en negro */
+}
+
+h2 {
+    color: #000000; /* Texto en negro */
+    border-bottom: 2px solid #000000; /* Línea negra en la parte inferior */
+    padding-bottom: 10px;
+}
+
+.producto {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    text-align: center;
+    vertical-align: top;
+    background-color: rgba(255, 165, 0, 0.7); /* Fondo naranja transparente */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #000000; /* Texto en negro */
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.producto h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #000000; /* Texto en negro */
+}
+
+.producto p {
+    margin: 5px 0;
+    color: #000000; /* Texto en negro */
+    font-weight: bold;
+}
+
+button {
+    background-color: #ff8c00; /* Naranja acorde a la campaña */
+    color: #000000; /* Texto en negro */
+    border: 2px solid #000000; /* Borde negro de 2px */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff4500; /* Naranja más oscuro al pasar el ratón */
+}
+
+#carrito {
+    background-color: rgba(255, 165, 0, 0.7); /* Fondo naranja transparente */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #000000; /* Texto en negro */
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    padding: 10px;
+    border-bottom: 1px solid #000000; /* Línea negra en la parte inferior */
+    color: #000000; /* Texto en negro */
+}
+
+#total {
+    font-weight: bold;
+    color: #000000; /* Texto en negro */
+}
+
+/* Estilos para el botón de WhatsApp */
+#carrito button.whatsapp-button {
+    background-color: #fbff00; /* Color verde de WhatsApp */
+    color: #000000; /* Texto en negro */
+    border: 2px solid #000000; /* Borde negro de 2px */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    display: block; /* Hace que el botón ocupe toda la línea */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+#carrito button.whatsapp-button:hover {
+    background-color: #128c7e; /* Color verde oscuro de WhatsApp */
+}
+
+/* Estilos para el botón de eliminar */
+.eliminar-button {
+    background-color: #dc3545; /* Color rojo */
+    color: #000000; /* Texto en negro */
+    border: 2px solid #000000; /* Borde negro de 2px */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px; /* Espacio entre el texto y el botón */
+}
+
+.eliminar-button:hover {
+    background-color: #c82333; /* Color rojo oscuro */
+}
+
+footer {
+    background-color: rgba(255, 165, 0, 0.7); /* Fondo naranja transparente */
+    color: #000000; /* Texto en negro */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para la sección de contacto */
+#contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contacto ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+#contacto ul li i {
+    margin-right: 10px;
+    color: #000000; /* Texto en negro */
+}
+
+.whatsapp-link {
+    text-decoration: none;
+    color: #25d366; /* Color verde de WhatsApp */
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #000000; /* Línea negra */
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    color: #000000; /* Texto en negro */
+}
+
+.search-bar button {
+    background-color: #ff8c00; /* Naranja acorde a la campaña */
+    color: #000000; /* Texto en negro */
+    border: 2px solid #000000; /* Borde negro de 2px */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.search-bar button:hover {
+    background-color: #ff4500; /* Naranja más oscuro al pasar el ratón */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    nav ul li {
+        display: block; /* Cambia a bloque para móviles */
+        margin: 5px 0; /* Espaciado reducido */
+    }
+
+    section {
+        padding: 10px; /* Padding reducido */
+        margin: 10px auto;
+    }
+
+    .producto {
+        width: 100%; /* Ocupa todo el ancho */
+        margin: 10px 0; /* Espaciado entre productos */
+    }
+
+    button {
+        width: 100%; /* Botón ocupa todo el ancho */
+        margin: 10px 0; /* Espaciado entre botones */
+    }
+}
+
+/* Estilos para el contenedor del código QR */
+#qrcode {
+    display: block; /* Asegura que el contenedor sea visible */
+    margin: 20px auto; /* Centra el contenedor y añade márgenes */
+    text-align: center; /* Centra el contenido */
+    width: 128px; /* Ancho del contenedor */
+    height: 128px; /* Alto del contenedor */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
+/* Estilos para la sección de perfumes */
+#perfumes {
+    margin-top: 20px;
+}
+
+#perfumes .producto {
+    border: 2px solid #ccc;
+    padding: 10px; 
+    margin: 10px;
+    text-align: center;
+}
+
+/* Nuevos estilos agregados para los botones de secciones */
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre botones */
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.section-buttons button {
+    background-color: #ff8c00; /* Naranja similar a Alkosto */
+    color: #ffffff; /* Texto en blanco */
+    border: none; /* Sin borde */
+    padding: 12px 24px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.section-buttons button:hover {
+    background-color: #ff4500; /* Naranja más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Animación para el efecto de clic */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(0.95); /* Reduce ligeramente el tamaño */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño normal */
+    }
+}
+
+.section-buttons button:active {
+    animation: clickEffect 0.2s ease; /* Animación de clic */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .section-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-buttons button {
+        width: 90%; /* Botones más anchos en móviles */
+        margin: 5px 0;
+    }
+}
+
+/* Animación de rayo */
+@keyframes rayo {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Estilos para los botones de categorías */
+.categorias button {
+    background-color: #ff8c00; /* Naranja acorde a la campaña */
+    color: #000000; /* Texto en negro */
+    border: 2px solid #000000; /* Borde negro de 2px */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.categorias button:hover {
+    background-color: #ff4500; /* Naranja más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Escala el botón al hacer hover */
+}
+
+/* Efecto de rayo al hacer hover */
+.categorias button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.categorias button:hover::before {
+    left: 100%;
+    animation: rayo 0.5s linear;
+}
+
+/* Estilos base para los botones */
+button {
+    background-color: transparent; /* Fondo transparente */
+    color: #000000; /* Texto blanco */
+    border: 2px solid rgb(255, 238, 0); /* Borde azul neón */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgb(255, 238, 0), 0 0 20px rgb(255, 238, 0), 0 0 40px rgb(255, 238, 0); /* Sombra azul neón */
+}
+
+/* Efecto neón rojo al hacer hover */
+button:hover {
+    border-color: rgb(255, 153, 0); /* Borde rojo neón */
+    box-shadow: 0 0 10px rgb(255, 153, 0), 0 0 20px rgb(255, 153, 0), 0 0 40px rgb(255, 153, 0); /* Sombra roja neón */
+    color: #000000; /* Texto blanco */
+}
+
+/* Destello de luz neón celeste al hacer clic */
+button:active {
+    background-color: #00ffff; /* Fondo celeste neón */
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff; /* Sombra celeste neón */
+    transition: background-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Animación de destello */
+@keyframes destello {
+    0% {
+        box-shadow: 0 0 10px rgb(111, 0, 255), 0 0 20px rgb(111, 0, 255), 0 0 40px rgb(111, 0, 255);
+    }
+    50% {
+        box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+    }
+    100% {
+        box-shadow: 0 0 10px rgb(111, 0, 255), 0 0 20px rgb(111, 0, 255), 0 0 40px rgb(111, 0, 255);
+    }
+}
+
+/* Aplicar animación al hacer clic */
+button:active {
+    animation: destello 0.3s ease;
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converse - Tienda Virtual J.J</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos adicionales para la página de Herramientas */
+        #herramientas {
+            margin-top: 20px;
+        }
+        #herramientas .producto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Animación para la barra de búsqueda */
+        #search-input {
+            transition: width 0.3s ease, border-color 0.3s ease;
+            width: 200px; /* Ancho inicial */
+        }
+
+        #search-input:focus {
+            width: 300px; /* Ancho al enfocar */
+            border-color: #007BFF; /* Cambia el color del borde al enfocar */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Converse - Tienda Virtual J.J</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Volver a la página principal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="¿Qué estas buscando?..">
+        <button onclick="buscarProducto()" title="Buscar"><i class="fas fa-search"></i></button>
+    </div>
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="categorias">
+            <button onclick="window.location.href='index.html'">Accesorios Para Celulares</button>
+            <button onclick="window.location.href='Herramientas.html'">Herramientas</button>
+            <button onclick="window.location.href='Converse.html'">Converse</button>
+            <button onclick="window.location.href='Skechers.html'">Skechers</button>
+            <button onclick="window.location.href='perfumes.html'">Perfumes</button>
+        </div>
+    </section>      
+
+<!-- Sección de Converse -->
+    <section id="productos">
+        <h2 id="Converse">Converse</h2>
+    <h3>Converse</h3>
+    <div class="producto">
+        <img src="images/converseAMARILLO.jpg" alt="Converse Amarillo">
+        <h3>Converse Amarillo</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Amarillo', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseAZULCELESTE.jpg" alt="Converse Azul Celeste">
+        <h3>Converse Azul Celeste</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Azul Celeste', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseBLANCOS.jpg" alt="Converse Blancos">
+        <h3>Converse Blancos</h3>
+        <p>$110,000</p>
+        <button onclick="agregarAlCarrito('Converse Blancos', 110000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseblancotipocuero.jpg" alt="Converse Blanco Tipo Cuero">
+        <h3>Converse Blanco Tipo Cuero</h3>
+        <p>$130.000</p> 
+        <button onclick="agregarAlCarrito('Converse Blanco Tipo Cuero', 0)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaAMARILLOS.jpg" alt="Converse Bota Amarillos">
+        <h3>Converse Bota Amarillos</h3>
+        <p>$120.000</p> 
+        <button onclick="agregarAlCarrito('Converse Bota Amarillos', 0)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaAZULREY.jpg" alt="Converse Bota Azul Rey">
+        <h3>Converse Bota Azul Rey</h3>
+        <p>$120.000</p> 
+        <button onclick="agregarAlCarrito('Converse Bota Azul Rey', 0)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaBLAnCO2.jpg" alt="Converse Bota Blanco 2">
+        <h3>Converse Bota Blanco 2</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Blanco 2', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaBLANCOS.jpg" alt="Converse Bota Blancos">
+        <h3>Converse Bota Blancos</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Blancos', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaMORADO.jpg" alt="Converse Bota Morado">
+        <h3>Converse Bota Morado</h3>
+        <p>$120.000</p> 
+        <button onclick="agregarAlCarrito('Converse Bota Morado', 0)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaNEGRO.jpg" alt="Converse Bota Negro">
+        <h3>Converse Bota Negro</h3>
+        <p>$160,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Negro', 160000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaNEGRO2.jpg" alt="Converse Bota Negro 2">
+        <h3>Converse Bota Negro 2</h3>
+        <p>$130,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Negro 2', 130000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaNEGROYBLANCO.jpg" alt="Converse Bota Negro y Blanco">
+        <h3>Converse Bota Negro y Blanco</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Negro y Blanco', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaROSADO.jpg" alt="Converse Bota Rosado">
+        <h3>Converse Bota Rosado</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Rosado', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaVERDEMILITAR.jpg" alt="Converse Bota Verde Militar">
+        <h3>Converse Bota Verde Militar</h3>
+        <p>$130,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Verde Militar', 130000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversebotaVINOTINTO.jpg" alt="Converse Bota Vino Tinto">
+        <h3>Converse Bota Vino Tinto</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Bota Vino Tinto', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseCELESTE.jpg" alt="Converse Celeste">
+        <h3>Converse Celeste</h3>
+        <p>$110,000</p>
+        <button onclick="agregarAlCarrito('Converse Celeste', 110000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseGRIS.jpg" alt="Converse Gris">
+        <h3>Converse Gris</h3>
+        <p>$110,000</p>
+        <button onclick="agregarAlCarrito('Converse Gris', 110000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseMORADO.jpg" alt="Converse Morado">
+        <h3>Converse Morado</h3>
+        <p>$110,000</p>
+        <button onclick="agregarAlCarrito('Converse Morado', 110000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseNEGRO3.jpg" alt="Converse Negro 3">
+        <h3>Converse Negro 3</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Negro 3', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseNEGROCONBLANCO.jpg" alt="Converse Negro con Blanco">
+        <h3>Converse Negro con Blanco</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Negro con Blanco', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseNEGROS.jpg" alt="Converse Negros">
+        <h3>Converse Negros</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Negros', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseROJO.jpg" alt="Converse Rojo">
+        <h3>Converse Rojo</h3>
+        <p>$110,000</p>
+        <button onclick="agregarAlCarrito('Converse Rojo', 110000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseROSADO.jpg" alt="Converse Rosado">
+        <h3>Converse Rosado</h3>
+        <p>$110,000</p>
+        <button onclick="agregarAlCarrito('Converse Rosado', 110000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/conversetiposuelagrandeBLANCO.jpg" alt="Converse Tipo Suela Grande Blanco">
+        <h3>Converse Tipo Suela Grande Blanco</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Tipo Suela Grande Blanco', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseVERDEMILITAR.jpg" alt="Converse Verde Militar">
+        <h3>Converse Verde Militar</h3>
+        <p>$120,000</p>
+        <button onclick="agregarAlCarrito('Converse Verde Militar', 120000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    <div class="producto">
+        <img src="images/converseVINOTINTO.jpg" alt="Converse Vino Tinto">
+        <h3>Converse Vino Tinto</h3>
+        <p>$130,000</p>
+        <button onclick="agregarAlCarrito('Converse Vino Tinto', 130000)">Agregar al carrito</button>
+        <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+    </div>
+    
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <!-- Botón para finalizar compra por WhatsApp -->
+        <button class="whatsapp-button" onclick="redirigirAWhatsApp()">Finalizar compra por WhatsApp</button>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos:</p>
+        <ul>
+            <li>
+                <i class="fas fa-phone"></i> Teléfono: +57 311 5541747
+            </li>
+            <li>
+                <a href="https://wa.me/573115541747" target="_blank" class="whatsapp-link">
+                    <i class="fab fa-whatsapp"></i> WhatsApp: +57 311 5541747
+                </a>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i> Correo: <a href="mailto:tiendavirtual202502@gmail.com">tiendavirtual202502@gmail.com</a>
+            </li>
+        </ul>
+    </section>
+   
+    <body>
+            <header>
+                <h1>Converse - Tienda Virtual J.J</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Volver a la página principal</a></li>
+                    </ul>
+                </nav>
+            </header>
+         
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tienda Virtual. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Modal para imágenes -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

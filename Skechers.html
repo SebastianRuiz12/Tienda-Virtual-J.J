@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skechers - Tienda Virtual J.J</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos adicionales para la página de Herramientas */
+        #herramientas {
+            margin-top: 20px;
+        }
+        #herramientas .producto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Animación para la barra de búsqueda */
+        #search-input {
+            transition: width 0.3s ease, border-color 0.3s ease;
+            width: 200px; /* Ancho inicial */
+        }
+
+        #search-input:focus {
+            width: 300px; /* Ancho al enfocar */
+            border-color: #007BFF; /* Cambia el color del borde al enfocar */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Skechers - Tienda Virtual J.J</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Volver a la página principal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="¿Qué estas buscando?..">
+        <button onclick="buscarProducto()" title="Buscar"><i class="fas fa-search"></i></button>
+    </div>
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="categorias">
+            <button onclick="window.location.href='index.html'">Accesorios Para Celulares</button>
+            <button onclick="window.location.href='Herramientas.html'">Herramientas</button>
+            <button onclick="window.location.href='Converse.html'">Converse</button>
+            <button onclick="window.location.href='Skechers.html'">Skechers</button>
+            <button onclick="window.location.href='perfumes.html'">Perfumes</button>
+        </div>
+    </section>      
+
+    <!-- Sección de Skechers -->
+    <section id="Skechers">
+        <h2>Skechers</h2>
+        <div class="producto">
+            <img src="images/Adidas Skechers Oscuras.jpg" alt=" Skechers Oscuras">
+            <h3>Skechers Oscuras</h3>
+            <p>$50,000</p>
+            <button onclick="agregarAlCarrito('Skechers Oscuras', 50000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/Adidas Skechers Gris.jpg" alt="Skechers Gris">
+            <h3>Skechers Gris</h3>
+            <p>$50,000</p>
+            <button onclick="agregarAlCarrito('Skechers Gris', 50000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/Adidas Skechers Azul Oscuro.jpg" alt="Skechers Azul Oscuro">
+            <h3>Skechers Azul Oscuro</h3>
+            <p>$50,000</p>
+            <button onclick="agregarAlCarrito('Skechers Azul Oscuro', 50000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/Adidas Skechers Rosado.jpg" alt="Skechers Rosado">
+            <h3>Skechers Rosado</h3>
+            <p>$50,000</p>
+            <button onclick="agregarAlCarrito('Skechers Rosado', 50000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+        <div class="producto">
+            <img src="images/Adidas Skechers Azul Celeste.jpg" alt="Skechers Azul Celeste">
+            <h3>Skechers Azul Celeste</h3>
+            <p>$50,000</p>
+            <button onclick="agregarAlCarrito('Skechers Azul Celeste', 50000)">Agregar al carrito</button>
+            <button onclick="finalizarCompraWhatsApp()">Finalizar compra por WhatsApp</button>
+        </div>
+    
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <!-- Botón para finalizar compra por WhatsApp -->
+            <button class="whatsapp-button" onclick="redirigirAWhatsApp()">Finalizar compra por WhatsApp</button>
+        </section>
+    
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos:</p>
+            <ul>
+                <li>
+                    <i class="fas fa-phone"></i> Teléfono: +57 311 5541747
+                </li>
+                <li>
+                    <a href="https://wa.me/573115541747" target="_blank" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i> WhatsApp: +57 311 5541747
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i> Correo: <a href="mailto:tiendavirtual202502@gmail.com">tiendavirtual202502@gmail.com</a>
+                </li>
+            </ul>
+        </section>
+        <body>
+            <header>
+                <h1>Adidas Skechers - Tienda Virtual J.J</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Volver a la página principal</a></li>
+                    </ul>
+                </nav>
+            </header>
+         
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tienda Virtual. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para imágenes -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
